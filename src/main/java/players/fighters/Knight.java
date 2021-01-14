@@ -8,8 +8,8 @@ public class Knight extends Player {
     private Weapon weapon;
     private int armour;
 
-    public Knight(String name, int health, Weapon weapon, int armour) {
-        super(name, health);
+    public Knight(String name, int health, int energy, Weapon weapon, int armour) {
+        super(name, health, energy);
         this.weapon = weapon;
         this.armour = armour;
     }

@@ -16,7 +16,7 @@ public class WizardTest {
     public void setUp(){
         weapon = new Weapon("Staff", 80);
         spell = new Spell("Fireball", 80);
-        wizard = new Wizard("Gandalf", 100, weapon, spell);
+        wizard = new Wizard("Gandalf", 100, 100, weapon, spell);
     }
 
     @Test
@@ -37,5 +37,10 @@ public class WizardTest {
     @Test
     public void canGetSpell(){
         assertEquals(spell, wizard.getSpell());
+    }
+
+    @Test
+    public void canGetEnergy(){
+        assertEquals(100, wizard.getEnergy());
     }
 }
