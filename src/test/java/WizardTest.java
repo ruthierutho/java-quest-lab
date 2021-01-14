@@ -14,7 +14,7 @@ public class WizardTest {
 
     @Before
     public void setUp(){
-        weapon = new Weapon("Staff", 80);
+        weapon = new Weapon("Staff", 80, 8);
         spell = new Spell("Fireball", 80);
         wizard = new Wizard("Gandalf", 100, 100, weapon, spell);
     }

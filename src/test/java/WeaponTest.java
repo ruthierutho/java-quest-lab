@@ -10,7 +10,7 @@ public class WeaponTest {
 
     @Before
     public void setUp(){
-        weapon = new Weapon("Broadsword", 30);
+        weapon = new Weapon("Broadsword", 30, 5);
     }
 
     @Test
@@ -21,5 +21,10 @@ public class WeaponTest {
     @Test
     public void canGetDamage(){
         assertEquals(30, weapon.getDamage());
+    }
+
+    @Test
+    public void canGetEffort(){
+        assertEquals(5, weapon.getEffort());
     }
 }
