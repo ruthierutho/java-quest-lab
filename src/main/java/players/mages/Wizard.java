@@ -29,17 +29,16 @@ public class Wizard extends Player implements IFight, ISpell {
 
     @Override
     public void fight(Weapon weapon, Player player) {
-        //get weapon damage int and effort int
-        int damage = this.getWeapon().getDamage();
-        int effort = this.getWeapon().getEffort();
-        //get enemy health int
-       int health = player.getHealth();
-        //enemy.health - weapon.damage
-        health -= damage;
-        //wizard.energy - weapon.effort
-       int energy = this.getEnergy();
-       energy -= effort;
 
+        int damage = this.getWeapon().getDamage();
+        int health = player.getHealth();
+        int newHealth = health - damage;
+        player.setHealth(newHealth);
+
+        int effort = this.getWeapon().getEffort();
+        int energy = this.getEnergy();
+        int newEnergy = energy - effort;
+        this.setEnergy(newEnergy);
 
     }
 

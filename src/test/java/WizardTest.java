@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import players.enemies.Orc;
 import players.mages.Wizard;
 import stuff.tools.Spell;
 import stuff.tools.Weapon;
@@ -11,12 +12,14 @@ public class WizardTest {
     Wizard wizard;
     Weapon weapon;
     Spell spell;
+    Orc orc;
 
     @Before
     public void setUp(){
         weapon = new Weapon("Staff", 80, 8);
         spell = new Spell("Fireball", 80);
         wizard = new Wizard("Gandalf", 100, 100, weapon, spell);
+        orc = new Orc("Grob", 90, 100, 80);
     }
 
     @Test
@@ -53,5 +56,12 @@ public class WizardTest {
     public void canSetEnergy(){
         wizard.setEnergy(80);
         assertEquals(80, wizard.getEnergy());
+    }
+
+    @Test
+    public void canDoAFight(){
+        wizard.fight(weapon, orc);
+        assertEquals(92, wizard.getEnergy());
+        assertEquals(10, orc.getHealth());
     }
 }
