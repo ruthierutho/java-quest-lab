@@ -29,7 +29,15 @@ public abstract class Player {
         return health;
     }
 
+    public void setHealth(int newHealth) {
+        this.health = newHealth;
+    }
+
     public int getEnergy() {
         return energy;
+    }
+
+    public void setEnergy(int newEnergy) {
+        this.energy = newEnergy;
     }
 }

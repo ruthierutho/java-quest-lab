@@ -43,4 +43,15 @@ public class WizardTest {
     public void canGetEnergy(){
         assertEquals(100, wizard.getEnergy());
     }
+
+    @Test
+    public void canSetHealth(){
+        wizard.setHealth(90);
+        assertEquals(90, wizard.getHealth());
+    }
+    @Test
+    public void canSetEnergy(){
+        wizard.setEnergy(80);
+        assertEquals(80, wizard.getEnergy());
+    }
 }
