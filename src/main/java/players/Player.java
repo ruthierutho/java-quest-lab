@@ -40,4 +40,12 @@ public abstract class Player {
     public void setEnergy(int newEnergy) {
         this.energy = newEnergy;
     }
+
+    public void reduceEnergy(int effort) {
+        this.energy -= effort;
+    }
+
+    public void reduceHealth(int damage) {
+        this.health -= damage;
+    }
 }

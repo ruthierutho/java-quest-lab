@@ -59,6 +59,18 @@ public class WizardTest {
     }
 
     @Test
+    public void canReduceEnergy(){
+        wizard.reduceEnergy(10);
+        assertEquals(90, wizard.getEnergy());
+    }
+
+    @Test
+    public void canReduceHealth(){
+        orc.reduceHealth(80);
+        assertEquals(10, orc.getHealth());
+    }
+
+    @Test
     public void canDoAFight(){
         wizard.fight(weapon, orc);
         assertEquals(92, wizard.getEnergy());
